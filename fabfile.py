@@ -746,3 +746,28 @@ def wordpress_workflow_upgrade(repository='origin', branch='master'):
     ulocal('wordpress-workflow/startProject.sh')
     ulocal('vagrant provision')
     print green('wordpress-workflow upgraded', bold=True)
+
+
+@task
+def run_tests():
+    """
+    Runs tests with PHP_CodeSniffer to detect violations of a defined coding standart
+    """
+
+    # run_thid_party_plugins_tests()
+    run_src_tests()
+
+
+@task
+def run_src_tests():
+    """
+    Runs tests with PHP_CodeSniffer to detect violations of a defined coding standart
+    """
+    require('public_dir')
+
+    print white("Running tests for src folder files...", bold=True)
+    with cd(env.public_dir + "wp-content/plugins"):
+        run('pwd')
+        run('phpcs --standard=WordPress-Core --colors '
+            '--report=json '
+            '/home/vagrant/public_www/wp-content/plugins -p ')

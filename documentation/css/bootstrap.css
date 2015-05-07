@@ -1082,7 +1082,7 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  background-color: #F2F2F0;
 }
 input,
 button,
@@ -1144,7 +1144,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #E3E5D0;
 }
 .sr-only {
   position: absolute;
@@ -4055,7 +4055,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4168,12 +4167,19 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
   line-height: 20px;
 }
+.navbar-brand img{
+  background: #C3C3C3;
+  border-radius: 50%;
+  padding: 7px 2px;
+  width: 12%;
+}
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
 }
 .navbar-brand > img {
-  display: block;
+  display: inline;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -4481,6 +4487,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse {
   background-color: #222;
   border-color: #080808;
+  border-bottom: solid 3px #DA5556;
 }
 .navbar-inverse .navbar-brand {
   color: #9d9d9d;
@@ -5127,10 +5134,10 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 10px 36px;
   margin-bottom: -1px;
-  background-color: #242424;
-  border-top: solid 1px #3F3F3F;
+  background-color: #E7E7E7;
+  border-top: solid 1px #D3D3D3;
   font-size: 12px;
 }
 .list-group-item:first-child {
@@ -5294,7 +5301,7 @@ a.list-group-item-danger.active:focus {
 .panel {
   margin-bottom: 20px;
   background-color: #fff;
-  border: 1px solid transparent;
+  border-bottom: 1px solid #E3E5D0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
@@ -5302,7 +5309,7 @@ a.list-group-item-danger.active:focus {
   padding: 15px;
 }
 .panel-heading {
-  padding: 10px 15px;
+  padding: 16px 36px;
   border-bottom: 1px solid transparent;
 }
 .panel-heading > .dropdown .dropdown-toggle {
@@ -5312,8 +5319,9 @@ a.list-group-item-danger.active:focus {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 16px;
-  color: #C8C8C8;
+  color: #6B6B6B;
   font-size: 14px;
+  font-weight: bold;
 }
 .panel-title > a,
 .panel-title > small,
@@ -5500,7 +5508,7 @@ a.list-group-item-danger.active:focus {
 }
 
 .panel-group a{
-  color: #8E8E8E;
+  color: #6B6B6B;
 }
 .panel-group a:hover{
   text-decoration: none;
@@ -5513,8 +5521,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-group .panel-heading {
   border-bottom: 0;
-  background: #000;
-  border-top: solid 1px rgb(8, 8, 8);
+  background: #F2F2EA;
 }
 .panel-group .panel-heading + .panel-collapse > .panel-body,
 .panel-group .panel-heading + .panel-collapse > .list-group {
@@ -5526,12 +5533,9 @@ a.list-group-item-danger.active:focus {
 .panel-group .panel-footer + .panel-collapse .panel-body {
   border-bottom: 1px solid #ddd;
 }
-.panel-default {
-  border-color: #000;
-}
 .panel-default > .panel-heading {
   color: #333;
-  background-color: #000;
+  background-color: #F2F2EA;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #ddd;
@@ -6571,20 +6575,83 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
-.logo{
-  background: #242424 !important;
-}
-
-.logo img,
-.logo span{
-  display: block;
-  margin: 0 auto;
-}
 
 .logo img{
   padding: 15px 8px;
   border-radius: 50%;
   background: white;
   margin-bottom: 5px;
+}
+
+.spinner img{
+  width: 20px;
+}
+
+.test-content{
+  background: #F0F0F0;
+  border-radius: 5px;
+  margin: 15px 0;
+}
+
+.test-section {
+  background: #ECECE8;
+  padding: 15px;
+  border: solid 1px rgb(229, 229, 229);
+  border-radius: 6px;
+}
+
+.test-section canvas,
+.test-section .quick_stats {
+  margin: 25px;
+}
+
+.score span {
+  font-size: 13px;
+}
+
+.test-header {
+  margin: 0 0 15px 0;
+}
+
+.test-header h3{
+  margin: 0;
+}
+
+.red-text{
+  color: #C03E3E;
+}
+
+.orange-text{
+  color: #D88312;
+}
+
+.green-text{
+  color: #269326;
+}
+
+.blue-text{
+  color: #17B3C7;
+}
+
+.test-details {
+  height: 250px !important;
+  overflow: scroll;
+}
+
+.test-details > h4{
+  margin-left: 20px;
+}
+
+.test-details .panel-group .panel-heading{
+  background: #EDEDED;
+  padding: 16px 18px;
+}
+
+.test-details .panel-group .list-group-item {
+    background-color: #E0E0E0;
+}
+
+.test-details .panel-group .panel-heading .panel-title{
+  font-weight: normal;
+  font-size: 13px;
 }

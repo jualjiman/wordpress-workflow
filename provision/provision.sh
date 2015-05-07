@@ -38,6 +38,16 @@ curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.pha
 chmod +x wp-cli.phar
 mv wp-cli.phar /usr/local/bin/wp
 
+Installing composer
+curl -sS https://getcomposer.org/installer | php
+chmod +x composer.phar
+mv composer.phar /usr/local/bin/composer
+
+# Installing squizlabs/php_codesniffer & WordPress-Coding-Standards
+composer create-project wp-coding-standards/wpcs:dev-master --no-dev
+ln -s /home/vagrant/wpcs/vendor/bin/phpcs /usr/local/bin/phpcs
+ln -s /home/vagrant/wpcs/vendor/bin/phpcbf /usr/local/bin/phpcbf
+
 # Activates site
 
 # Apache
